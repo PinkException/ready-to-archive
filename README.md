@@ -31,7 +31,30 @@ saved" points at a file it actually read or a `git` command it actually ran — 
 2. **Ask, before you archive:**
    > *"Ready to archive?"*  ·  *"Can I safely archive this?"*  ·  *"Is everything recorded?"*
 
-You get back a verdict — ✅ SAFE, ⚠️ NOT YET, or ❓ CAN'T FULLY VERIFY — with the evidence.
+You get back one verdict — ✅ SAFE, ⚠️ NOT YET, or ❓ CAN'T FULLY VERIFY — in a to-do-first
+layout: what still needs you, then what's already done, then your options.
+
+```markdown
+🔎 Checked git + main (fetched now) + bug docs + memory · branch fix/parser, 3 commits
+
+## ⚠️ NOT YET — 2 things to fix first
+
+### 🔴 Needs you (2)
+1. **Write the root cause into docs/bugs/041**
+   → the finding only exists in this chat
+2. **Merge fix/parser to main**
+   → committed, but no PR and not merged
+
+### ✅ Done
+- ✅ **Saved:** all work committed, nothing loose
+- 🔴 **Shipped:** fix/parser not on main (above)
+- 🔴 **Written down:** 1 missing (above)
+
+**Your call:**
+- **a**: write the finding and hand off to jig:slice-land to merge
+- **b**: only write the finding
+- **c**: nothing, I'll handle it
+```
 
 ## 🧭 How it works
 
